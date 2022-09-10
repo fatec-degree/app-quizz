@@ -26,11 +26,12 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 if(radioButton6.isChecked()){
                     Toast.makeText(MainActivity.this, "Correto", Toast.LENGTH_SHORT).show();
-                    Intent intent = new Intent(getApplicationContext(), Pergunta2Activity.class);
-                    startActivity(intent);
+                    Util.pontos++;
                 } else {
                     Toast.makeText(MainActivity.this, "Incorreto", Toast.LENGTH_SHORT).show();
                 }
+                Intent intent = new Intent(getApplicationContext(), Pergunta2Activity.class);
+                startActivity(intent);
             }
         });
     }

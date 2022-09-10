@@ -25,9 +25,11 @@ public class Pergunta2Activity extends AppCompatActivity {
             public void onClick(View view) {
                 if(radioButtonPulpFiction.isChecked()){
                     Toast.makeText(Pergunta2Activity.this, "Correto", Toast.LENGTH_SHORT).show();
+                    Util.pontos++;
                 } else {
                     Toast.makeText(Pergunta2Activity.this, "Incorreto", Toast.LENGTH_SHORT).show();
                 }
+                Toast.makeText(Pergunta2Activity.this, "Total pontos: " + Util.pontos, Toast.LENGTH_SHORT).show();
             }
         });
     }
