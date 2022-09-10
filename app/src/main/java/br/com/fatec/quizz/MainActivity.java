@@ -3,8 +3,10 @@ package br.com.fatec.quizz;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.RadioButton;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -18,7 +20,16 @@ public class MainActivity extends AppCompatActivity {
 
         associaComponentes();
 
-
+        buttonResponderP1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(radioButton6.isChecked()){
+                    Toast.makeText(MainActivity.this, "Correto", Toast.LENGTH_SHORT).show();
+                } else {
+                    Toast.makeText(MainActivity.this, "Incorreto", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
     }
 
     private void associaComponentes(){
